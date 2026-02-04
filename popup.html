@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <style>
+    body {
+      width: 280px;
+      padding: 16px;
+      font-family: "Microsoft YaHei", sans-serif;
+      font-size: 14px;
+    }
+    h3 {
+      margin: 0 0 12px 0;
+      font-size: 16px;
+    }
+    .row {
+      margin-bottom: 12px;
+    }
+    label {
+      display: block;
+      margin-bottom: 4px;
+      color: #666;
+    }
+    input[type="number"] {
+      width: 60px;
+      padding: 6px;
+      margin-right: 8px;
+    }
+    button {
+      padding: 8px 16px;
+      margin-top: 8px;
+      cursor: pointer;
+      background: #4a9eff;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      font-size: 14px;
+    }
+    button:hover {
+      background: #3a8eef;
+    }
+    #now {
+      margin-top: 12px;
+      background: #52c41a;
+    }
+    #now:hover {
+      background: #45a818;
+    }
+    .tip {
+      font-size: 12px;
+      color: #999;
+      margin-top: 12px;
+    }
+  </style>
+</head>
+<body>
+  <h3>GLaDOS 自动签到</h3>
+  <div class="row">
+    <label>每天签到时间</label>
+    <input type="number" id="hour" min="0" max="23" value="8"> 时
+    <input type="number" id="minute" min="0" max="59" value="0"> 分
+  </div>
+  <button id="save">保存时间</button>
+  <button id="now">立即签到</button>
+  <p class="tip">请先在浏览器中登录 GLaDOS，扩展到点会自动打开签到页并点击签到。</p>
+  <script src="popup.js"></script>
+</body>
+</html>

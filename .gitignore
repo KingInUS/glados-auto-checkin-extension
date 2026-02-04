@@ -1,0 +1,21 @@
+# 系统与缓存
+.DS_Store
+Thumbs.db
+desktop.ini
+*.log
+.cache/
+
+# 编辑器 / IDE
+.vscode/
+.idea/
+*.sublime-*
+*~
+
+# 环境与敏感配置（若以后用到）
+.env
+.env.*
+*.local
+
+# 若有打包或构建产物可在此追加
+# dist/
+# *.zip

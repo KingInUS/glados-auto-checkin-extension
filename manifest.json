@@ -1,0 +1,29 @@
+{
+  "manifest_version": 3,
+  "name": "GLaDOS 自动签到",
+  "version": "1.0.0",
+  "description": "每天自动打开 GLaDOS 签到页并点击签到按钮",
+  "permissions": [
+    "alarms",
+    "storage",
+    "scripting"
+  ],
+  "host_permissions": [
+    "https://glados.cloud/*",
+    "https://*.glados.cloud/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://glados.cloud/console/checkin*", "https://*.glados.cloud/console/checkin*"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "GLaDOS 自动签到"
+  }
+}
